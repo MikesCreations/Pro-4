@@ -37,14 +37,14 @@ namespace Pro_4
             this.lblOutput = new System.Windows.Forms.Label();
             this.txtMin = new System.Windows.Forms.TextBox();
             this.txtMax = new System.Windows.Forms.TextBox();
-            this.lblOutput2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnInt
             // 
-            this.btnInt.Location = new System.Drawing.Point(124, 214);
+            this.btnInt.Location = new System.Drawing.Point(40, 152);
+            this.btnInt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInt.Name = "btnInt";
-            this.btnInt.Size = new System.Drawing.Size(95, 38);
+            this.btnInt.Size = new System.Drawing.Size(71, 31);
             this.btnInt.TabIndex = 0;
             this.btnInt.Text = "Get integer";
             this.btnInt.UseVisualStyleBackColor = true;
@@ -52,78 +52,77 @@ namespace Pro_4
             // 
             // btnDub
             // 
-            this.btnDub.Location = new System.Drawing.Point(313, 214);
+            this.btnDub.Location = new System.Drawing.Point(151, 152);
+            this.btnDub.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDub.Name = "btnDub";
-            this.btnDub.Size = new System.Drawing.Size(90, 38);
+            this.btnDub.Size = new System.Drawing.Size(76, 31);
             this.btnDub.TabIndex = 1;
             this.btnDub.Text = "Get double";
             this.btnDub.UseVisualStyleBackColor = true;
+            this.btnDub.Click += new System.EventHandler(this.btnDub_Click);
             // 
             // lblMin
             // 
             this.lblMin.AutoSize = true;
-            this.lblMin.Location = new System.Drawing.Point(134, 80);
+            this.lblMin.Location = new System.Drawing.Point(37, 70);
+            this.lblMin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMin.Name = "lblMin";
-            this.lblMin.Size = new System.Drawing.Size(63, 17);
+            this.lblMin.Size = new System.Drawing.Size(48, 13);
             this.lblMin.TabIndex = 2;
             this.lblMin.Text = "Minimum";
             // 
             // lblMax
             // 
             this.lblMax.AutoSize = true;
-            this.lblMax.Location = new System.Drawing.Point(134, 142);
+            this.lblMax.Location = new System.Drawing.Point(37, 114);
+            this.lblMax.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMax.Name = "lblMax";
-            this.lblMax.Size = new System.Drawing.Size(66, 17);
+            this.lblMax.Size = new System.Drawing.Size(51, 13);
             this.lblMax.TabIndex = 3;
             this.lblMax.Text = "Maximum";
             // 
             // lblHeader
             // 
             this.lblHeader.AutoSize = true;
-            this.lblHeader.Location = new System.Drawing.Point(149, 32);
+            this.lblHeader.Location = new System.Drawing.Point(37, 30);
+            this.lblHeader.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(254, 17);
+            this.lblHeader.Size = new System.Drawing.Size(190, 13);
             this.lblHeader.TabIndex = 4;
             this.lblHeader.Text = "Type in a minimum and maximum value";
             // 
             // lblOutput
             // 
             this.lblOutput.AutoSize = true;
-            this.lblOutput.Location = new System.Drawing.Point(260, 294);
+            this.lblOutput.BackColor = System.Drawing.Color.Plum;
+            this.lblOutput.Location = new System.Drawing.Point(111, 202);
+            this.lblOutput.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOutput.Name = "lblOutput";
-            this.lblOutput.Size = new System.Drawing.Size(16, 17);
+            this.lblOutput.Size = new System.Drawing.Size(0, 13);
             this.lblOutput.TabIndex = 5;
-            this.lblOutput.Text = "h";
             // 
             // txtMin
             // 
-            this.txtMin.Location = new System.Drawing.Point(263, 77);
+            this.txtMin.Location = new System.Drawing.Point(151, 67);
+            this.txtMin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMin.Name = "txtMin";
-            this.txtMin.Size = new System.Drawing.Size(100, 22);
+            this.txtMin.Size = new System.Drawing.Size(76, 20);
             this.txtMin.TabIndex = 6;
             // 
             // txtMax
             // 
-            this.txtMax.Location = new System.Drawing.Point(263, 137);
+            this.txtMax.Location = new System.Drawing.Point(151, 114);
+            this.txtMax.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMax.Name = "txtMax";
-            this.txtMax.Size = new System.Drawing.Size(100, 22);
+            this.txtMax.Size = new System.Drawing.Size(76, 20);
             this.txtMax.TabIndex = 7;
-            // 
-            // lblOutput2
-            // 
-            this.lblOutput2.AutoSize = true;
-            this.lblOutput2.Location = new System.Drawing.Point(263, 315);
-            this.lblOutput2.Name = "lblOutput2";
-            this.lblOutput2.Size = new System.Drawing.Size(16, 17);
-            this.lblOutput2.TabIndex = 8;
-            this.lblOutput2.Text = "h";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblOutput2);
+            this.BackColor = System.Drawing.Color.Plum;
+            this.ClientSize = new System.Drawing.Size(290, 255);
             this.Controls.Add(this.txtMax);
             this.Controls.Add(this.txtMin);
             this.Controls.Add(this.lblOutput);
@@ -132,8 +131,9 @@ namespace Pro_4
             this.Controls.Add(this.lblMin);
             this.Controls.Add(this.btnDub);
             this.Controls.Add(this.btnInt);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainForm";
-            this.Text = "Random math";
+            this.Text = "Random numbers";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,7 +149,6 @@ namespace Pro_4
         private System.Windows.Forms.Label lblOutput;
         private System.Windows.Forms.TextBox txtMin;
         private System.Windows.Forms.TextBox txtMax;
-        private System.Windows.Forms.Label lblOutput2;
     }
 }
 

@@ -16,16 +16,23 @@ namespace Pro_4
         {
             InitializeComponent();
         }
-
+        Random generator = new Random();
         private void btnInt_Click(object sender, EventArgs e)
         {
-            int Min = txtMin.Text;
+            int Min = Convert.ToInt32(txtMin.Text);
+            int Max = Convert.ToInt32(txtMax.Text);
 
-            
 
+            lblOutput.Text = generator.Next(Min, Max)+"";
 
-            lblOutput.Text = Min;
+        }
 
+        private void btnDub_Click(object sender, EventArgs e)
+        {
+            int Min = Convert.ToInt32(txtMin.Text);
+            int Max = Convert.ToInt32(txtMax.Text);
+
+            lblOutput.Text = generator.Next(Min, Max) + generator.NextDouble() + "";
         }
     }
 }
