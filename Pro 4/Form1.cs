@@ -19,20 +19,35 @@ namespace Pro_4
         Random generator = new Random();
         private void btnInt_Click(object sender, EventArgs e)
         {
-            int Min = Convert.ToInt32(txtMin.Text);
-            int Max = Convert.ToInt32(txtMax.Text);
+            int Min, Max;
 
+            if (!Int32.TryParse(txtMin.Text, out Min) || !Int32.TryParse(txtMax.Text, out Max))
+                lblOutput.Text = "Write a number";
+            
+            else if (Min > Max)
+                lblOutput.Text = "Error, min>max";
 
-            lblOutput.Text = generator.Next(Min, Max)+"";
+            else
+                lblOutput.Text = generator.Next(Min, Max) + "";
+
+            
+
+            
 
         }
 
         private void btnDub_Click(object sender, EventArgs e)
         {
-            int Min = Convert.ToInt32(txtMin.Text);
-            int Max = Convert.ToInt32(txtMax.Text);
+            int Min, Max;
 
-            lblOutput.Text = generator.Next(Min, Max) + generator.NextDouble() + "";
+            if (!Int32.TryParse(txtMin.Text, out Min) || !Int32.TryParse(txtMax.Text, out Max))
+                lblOutput.Text = "Write a number";
+
+            else if (Min > Max)
+                lblOutput.Text = "Error, min>max";
+
+            else                         
+                lblOutput.Text = generator.Next(Min, Max) + generator.NextDouble() + "";
         }
     }
 }
